@@ -64,7 +64,6 @@ class MainActivity : AppCompatActivity() {
         art.enqueue(object : retrofit2.Callback<Article> {
             override fun onResponse(call: Call<Article>, response: Response<Article>) {
                 val news = response.body()
-                Log.d("AAKA", "response get")
                 if (news != null){
 
                     //==========  Article list - Adapter  ==============
