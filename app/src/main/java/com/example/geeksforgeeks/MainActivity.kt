@@ -24,7 +24,6 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var adapter : RecyclerAdapter
     lateinit var reload : SwipeRefreshLayout
-    lateinit var recyclerArticle : RecyclerView
 
     lateinit var cardL : CardView
     lateinit var largeTitle : TextView
@@ -56,6 +55,7 @@ class MainActivity : AppCompatActivity() {
         date = findViewById(R.id.date)
         imageLarge = findViewById(R.id.imageViewLargeArticle)
 
+//        All sub-Articles
         recycler.visibility = View.GONE
         cardL.visibility = View.GONE
         progressBar.visibility = View.VISIBLE
