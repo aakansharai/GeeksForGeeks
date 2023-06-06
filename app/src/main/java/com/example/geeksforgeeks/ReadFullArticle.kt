@@ -15,14 +15,15 @@ class ReadFullArticle : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_read_full_article)
 
-        val url = intent.getStringExtra("URL")
-        var article : WebView = findViewById(R.id.viewArticle)
-        var progressbar : ProgressBar = findViewById(R.id.progressBarArticle)
+        val url = intent.getStringExtra("URL")  //getting Article URL
+        val article : WebView = findViewById(R.id.viewArticle)
+        val progressbar : ProgressBar = findViewById(R.id.progressBarArticle)
 
         progressbar.visibility = View.VISIBLE
 
         if(url != null){
             article.settings.javaScriptEnabled = true
+            //user agent String : To identify the screen
             article.settings.userAgentString = "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1"
 
             article.webViewClient = object: WebViewClient(){
